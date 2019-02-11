@@ -1,0 +1,13 @@
+﻿CREATE DATABASE [Web]
+GO
+
+USE [Web]  
+GO  
+
+IF NOT EXISTS (SELECT * FROM SYSOBJECTS where name='MediaView' and xtype='U')
+    CREATE TABLE [MediaViewss] (	
+	[Id] int PRIMARY KEY NOT NULL,  
+	[ViewName] varchar(25) NOT NULL,  
+	[DeviceIds] varchar(50),
+	[TotalDevices] int)	 
+GO
